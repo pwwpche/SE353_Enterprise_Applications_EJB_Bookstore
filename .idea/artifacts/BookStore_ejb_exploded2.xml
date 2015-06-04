@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="BookStore:ejb exploded2">
+    <output-path>$PROJECT_DIR$/out/artifacts/BookStore_ejb_exploded2</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="bookstore/ejb/EJB" />
+      <element id="module-output" name="bookstore" />
+    </root>
+  </artifact>
+</component>

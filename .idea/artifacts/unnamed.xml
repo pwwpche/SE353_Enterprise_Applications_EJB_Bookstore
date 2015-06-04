@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="unnamed">
+    <output-path>$PROJECT_DIR$/out/artifacts/unnamed.war</output-path>
+    <root id="root">
+      <element id="module-output" name="bookstore" />
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="org.json" />
+        <element id="library" level="project" name="servlet-api" />
+        <element id="library" level="project" name="mysql-connector-java-5.1.29-bin" />
+        <element id="library" level="project" name="javax.json" />
+        <element id="library" level="application" name="ejb-3.2" />
+        <element id="library" level="application" name="Hibernate 4.2.2-4.2.2" />
+        <element id="library" level="project" name="jasper-el" />
+        <element id="file-copy" path="D:/setup/apache-tomcat-7.0.53/lib/jasper.jar" />
+        <element id="library" level="project" name="Java EE 6" />
+        <element id="library" level="application" name="Java EE 6-Java EE 6" />
+      </element>
+      <element id="javaee-facet-resources" facet="BookStore/javaeeApplication/javaEEApplication" />
+      <element id="javaee-facet-resources" facet="bookstore/ejb/EJB" />
+      <element id="javaee-facet-resources" facet="bookstore/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="BookStore:war exploded2">
+    <output-path>$PROJECT_DIR$/out/artifacts/BookStore_war_exploded2</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="bookstore" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="Hibernate 4.2.2-4.2.2" />
+          <element id="file-copy" path="D:/setup/apache-tomcat-7.0.53/lib/jasper.jar" />
+          <element id="library" level="project" name="jasper-el" />
+          <element id="library" level="project" name="org.json" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.29-bin" />
+          <element id="library" level="project" name="javax.json" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="bookstore/web/Web" />
+    </root>
+  </artifact>
+</component>

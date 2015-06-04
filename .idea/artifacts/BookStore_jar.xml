@@ -1,0 +1,41 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BookStore:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/BookStore_jar</output-path>
+    <root id="archive" name="BookStore.jar">
+      <element id="module-output" name="bookstore" />
+      <element id="extracted-dir" path="D:/setup/apache-tomcat-7.0.53/lib/servlet-api.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/setup/apache-tomcat-7.0.53/lib/jasper.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/Java EE/Java EE 6/javax.annotation.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/Java EE/Java EE 6/javax.jms.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/Java EE/Java EE 6/javax.servlet.jsp.jstl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/Java EE/Java EE 6/javax.resource.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/JSON/javax.json.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/ejb/ejb-3.2/javax.ejb-api.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/mysql/mysql-connector-java-5.1.29-bin.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/setup/apache-tomcat-7.0.53/lib/jasper-el.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/Hibernate4/Hibernate 4.2.2/hibernate-commons-annotations-4.0.2.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/Hibernate4/Hibernate 4.2.2/antlr-2.7.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/Hibernate4/Hibernate 4.2.2/hibernate-core-4.2.2.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/Hibernate4/Hibernate 4.2.2/hibernate-jpa-2.0-api-1.0.1.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/Hibernate4/Hibernate 4.2.2/dom4j-1.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/Hibernate4/Hibernate 4.2.2/javassist-3.15.0-GA.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/Hibernate4/Hibernate 4.2.2/jboss-logging-3.1.0.GA.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/Hibernate4/Hibernate 4.2.2/jboss-transaction-api_1.1_spec-1.0.1.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/setup/jboss/EAP-6.3.0/jboss-eap-6.3/jboss-modules.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/org.JSON/org.json.jar" path-in-jar="/" />
+      <element id="library" level="application" name="ejb-3.2" />
+      <element id="library" level="application" name="Hibernate 4.2.2-4.2.2" />
+      <element id="library" level="project" name="jasper-el" />
+      <element id="file-copy" path="D:/setup/apache-tomcat-7.0.53/lib/jasper.jar" />
+      <element id="library" level="project" name="Java EE 6" />
+      <element id="library" level="application" name="Java EE 6-Java EE 6" />
+      <element id="library" level="project" name="javax.json" />
+      <element id="library" level="project" name="mysql-connector-java-5.1.29-bin" />
+      <element id="library" level="project" name="org.json" />
+      <element id="library" level="project" name="servlet-api" />
+      <element id="javaee-facet-resources" facet="bookstore/ejb/EJB" />
+      <element id="javaee-facet-resources" facet="BookStore/javaeeApplication/javaEEApplication" />
+      <element id="javaee-facet-resources" facet="bookstore/web/Web" />
+    </root>
+  </artifact>
+</component>

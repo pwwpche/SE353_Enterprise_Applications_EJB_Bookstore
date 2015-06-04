@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+<!--
+        Use HTTPS to visit login page
+-->
+    <security-constraint>
+        <display-name>SecurityConstraint</display-name>
+        <web-resource-collection>
+            <web-resource-name>Secured resources</web-resource-name>
+            <url-pattern>/index.jsp</url-pattern>
+        </web-resource-collection>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+    <!--
+        JAAS using glassfish realm
+        Page Authorization control
+    -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Admin Panel</web-resource-name>
+            <url-pattern>/adminUser.jsp</url-pattern>
+            <url-pattern>/adminLogin.jsp</url-pattern>
+            <url-pattern>/adminSales.jsp</url-pattern>
+            <url-pattern>/adminBooks.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>Administrator</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <display-name>SecurityConstraint</display-name>
+        <web-resource-collection>
+            <web-resource-name>Secured resources</web-resource-name>
+            <url-pattern>/userInterface.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>allUsers</role-name>
+            <role-name>Administrator</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <!--
+        JAAS using glassfish realm
+        User Role Definition
+    -->
+    <security-role>
+        <role-name>allUsers</role-name>
+    </security-role>
+    <security-role>
+        <role-name>Administrator</role-name>
+    </security-role>
+
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <realm-name>MyCustomRealm</realm-name>
+        <form-login-config>
+            <form-login-page>/index.jsp</form-login-page>
+            <form-error-page>/index.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+
+<!--
+    RESTful web service
+-->
+    <servlet>
+        <servlet-name>jersey-serlvet</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>Util.RestWebService.BookResourceConfig</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>jersey-serlvet</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+
+ <!--
+    Other servlets
+ -->
+    <servlet>
+        <servlet-name>loginCheck</servlet-name>
+        <servlet-class>Servlets.LoginCheck</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>regCheck</servlet-name>
+        <servlet-class>Servlets.RegCheck</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>adminLogin</servlet-name>
+        <servlet-class>Servlets.AdminLogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>adminUser</servlet-name>
+        <servlet-class>Servlets.AdminUser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>adminBook</servlet-name>
+        <servlet-class>Servlets.AdminBook</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>addCart</servlet-name>
+        <servlet-class>Servlets.AddCart</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>saleQuery</servlet-name>
+        <servlet-class>Servlets.AdminSales</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>userBook</servlet-name>
+        <servlet-class>Servlets.UserBook</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>saleQuery</servlet-name>
+        <url-pattern>/adminSales</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addCart</servlet-name>
+        <url-pattern>/addCart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adminBook</servlet-name>
+        <url-pattern>/adminBook</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminUser</servlet-name>
+        <url-pattern>/adminUser</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>adminLogin</servlet-name>
+        <url-pattern>/adminLogin</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>userBook</servlet-name>
+        <url-pattern>/userBook</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>loginCheck</servlet-name>
+        <url-pattern>/loginCheck</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>regCheck</servlet-name>
+        <url-pattern>/regCheck</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

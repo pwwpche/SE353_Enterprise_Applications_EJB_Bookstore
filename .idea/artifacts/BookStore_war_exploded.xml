@@ -1,0 +1,31 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="BookStore:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/BookStore_war_exploded.war</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="bookstore" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="Hibernate 4.2.2-4.2.2" />
+          <element id="file-copy" path="D:/setup/apache-tomcat-7.0.53/lib/jasper.jar" />
+          <element id="library" level="project" name="jasper-el" />
+          <element id="library" level="project" name="org.json" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.29-bin" />
+          <element id="library" level="project" name="javax.json" />
+          <element id="library" level="project" name="Java EE 6" />
+          <element id="library" level="application" name="Java EE 6-Java EE 6" />
+          <element id="library" level="project" name="servlet-api" />
+          <element id="library" level="application" name="ejb-3.2" />
+          <element id="file-copy" path="D:/setup/jboss/EAP-6.3.0/jboss-eap-6.3/bundles/system/layers/base/javax/servlet/api/v25/jboss-servlet-api_2.5_spec-1.0.1.Final-redhat-2.jar" />
+          <element id="library" level="application" name="Antisamy - 1.5.3" />
+          <element id="library" level="application" name="MemCached - 2.6.6" />
+          <element id="library" level="application" name="AspectJ Rumtime - 1.8.5" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="bookstore/web/Web" />
+      <element id="artifact" artifact-name="BookStore:javaEEApplication exploded" />
+      <element id="artifact" artifact-name="BookStore:EJB exploded" />
+    </root>
+  </artifact>
+</component>
